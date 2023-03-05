@@ -1,8 +1,10 @@
 {{define "base"}}
+<!-- Go strips out all HTML comments -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- pipelining dot, passes the data to the next template -->
     <title>{{template "title" .}} - Snippetbox</title>
     <!-- Link to the CSS stylesheet and favicon -->
     <link rel="stylesheet" href="/static/css/main.css" />
@@ -25,7 +27,9 @@
     <main>
       {{template "main" .}}
     </main>
-    <footer>Powered by <a href="https://golang.org/">Go</a></footer>
+    <footer>
+      Powered by <a href="https://golang.org/">Go</a> in {{.CurrentYear}}
+    </footer>
     <!-- And include the JavaScript file -->
     <script src="/static/js/main.js" type="text/javascript"></script>
   </body>
