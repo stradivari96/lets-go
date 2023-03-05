@@ -12,3 +12,8 @@
 go mod init snippetbox.xiang.es
 go run ./cmd/web
 ```
+
+```
+go get github.com/go-sql-driver/mysql
+go mod tidy -v
+```
